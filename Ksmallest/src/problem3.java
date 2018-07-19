@@ -28,7 +28,7 @@ public class problem3 {
 			temp = mbh.deleteMin();
 			i++;
 		}
-		System.out.println(mbh + "\n");
+		System.out.println("****************************\n" + mbh + "\n********************************\n");
 		return temp;
 	}
 
