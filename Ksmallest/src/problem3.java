@@ -23,8 +23,10 @@ public class problem3 {
 		System.out.println(mbh + "\nK: " + k + "\n");
 		int temp = 0;
 		// find K'th smallest
-		for (int i = 0; i <= k; i++) {
+		int i = 0;
+		while(i <= k) {
 			temp = mbh.deleteMin();
+			i++;
 		}
 		System.out.println(mbh + "\n");
 		return temp;
