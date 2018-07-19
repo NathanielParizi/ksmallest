@@ -10,7 +10,9 @@ public class problem3 {
 	}
 
 	// find K'th smallest
-	public Integer findKthSmallest(int k, int n) {
+	public Integer findKthLargest(int k, int n) {
+		// account for natural numbers
+		k = k + 1;
 		// load random values of N size
 		number = new Integer[n];
 		for (int i = 0; i < number.length; i++) {
@@ -18,13 +20,12 @@ public class problem3 {
 
 		}
 		// populate heap in bulk
-		mbh = new MyBinaryHeap<Integer>(number);
+		mbh = new MyBinaryHeap<Integer>();
 		mbh.addAll(number);
 		System.out.println(mbh + "\nK: " + k + "\n");
 		int temp = 0;
 		// find K'th smallest
-		int i = 0;
-		while(i <= k) {
+		for (int i = 0; i <= k; i++) {
 			temp = mbh.deleteMin();
 			i++;
 		}
